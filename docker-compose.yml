@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  portfolio:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev      
+    container_name: portfolio
+    restart: unless-stopped
+    networks:
+      - traefik_net
+    volumes:
+      - .:/site
+      - /site/node_modules
+    labels:
+      traefik.port: "8000"
+      traefik.frontend.rule: "Host:${GATSBY_URL}"
+      traefik.enable: "true"
+      traefik.docker.network: "traefik_net"
+      traefik.entryPoint: "https"
+      traefik.backend: "cc_gatsby"
+
+networks:
+  codecannon_net:
+    external: true
+  traefik_net:
+    external: true
