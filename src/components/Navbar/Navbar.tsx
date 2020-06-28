@@ -15,7 +15,7 @@ interface NavbarState {
 
 class Navbar extends React.Component<NavbarProps, NavbarState> {
   state: NavbarState = {
-    scrollY: window.pageYOffset,
+    scrollY: 0,
   }
 
   componentDidMount() {
