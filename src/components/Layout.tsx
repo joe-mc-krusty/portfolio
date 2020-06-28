@@ -9,8 +9,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import SideMenu from "./SideMenu/SideMenu"
-import "../styles/components/Layout.scss"
+import Hero from "./Hero/Hero"
+import HeroWrapper from "./HeroWrapper/HeroWrapper"
+import Navbar from "./Navbar/Navbar"
+import About from "./About/About"
 
 interface Props {
   children?: any
@@ -29,14 +31,27 @@ const Layout = ({ children }: Props) => {
 
   return (
     <>
-      <div className="columns">
-        <div className="column is-flex is-2 is-hidden-touch menu-column">
-          <SideMenu />
+      <Navbar hideOffset={250} />
+      <HeroWrapper className="hero is-primary is-fullheight">
+        <Hero />
+      </HeroWrapper>
+      <About />
+      <section className="hero is-info is-large">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">Large title</h1>
+            <h2 className="subtitle">Large subtitle</h2>
+          </div>
         </div>
-        <div className="column">
-          <main>{children}</main>
+      </section>
+      <section className="hero is-success is-fullheight">
+        <div className="hero-body">
+          <div className="container">
+            <h1 className="title">Fullheight title</h1>
+            <h2 className="subtitle">Fullheight subtitle</h2>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   )
 }
