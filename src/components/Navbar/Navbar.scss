@@ -1,0 +1,30 @@
+.Navbar {
+  transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  &.transparent {
+    background: rgba(255, 255, 255, 0);
+    .navbar-item {
+      color: #ffffff;
+    }
+  }
+
+  &.invisible {
+    background: rgba(255, 255, 255, 0);
+    opacity: 0;
+    color: rgba(255, 255, 255, 0);
+  }
+
+  &.plain {
+    opacity: 1;
+    background: #ffffff;
+    .navbar-item {
+      color: #000000;
+    }
+  }
+
+  .navbar-start {
+    flex-grow: 1;
+    justify-content: center;
+  }
+}
