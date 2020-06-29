@@ -24,7 +24,9 @@ class About extends React.Component<AboutProps, AboutState> {
               }}
             />
           </div>
-          <div className="column is-2"></div>
+          <div className="column is-4">
+            <h2 className="subtitle is-5">About me</h2>
+          </div>
         </div>
       </section>
     )
