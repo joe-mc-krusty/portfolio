@@ -13,6 +13,7 @@ import Hero from "./Hero/Hero"
 import HeroWrapper from "./HeroWrapper/HeroWrapper"
 import Navbar from "./Navbar/Navbar"
 import About from "./About/About"
+import Resume from "./Resume/Resume"
 
 interface Props {
   children?: any
@@ -36,22 +37,7 @@ const Layout = ({ children }: Props) => {
         <Hero />
       </HeroWrapper>
       <About />
-      <section className="hero is-info is-large">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title">Large title</h1>
-            <h2 className="subtitle">Large subtitle</h2>
-          </div>
-        </div>
-      </section>
-      <section className="hero is-success is-fullheight">
-        <div className="hero-body">
-          <div className="container">
-            <h1 className="title">Fullheight title</h1>
-            <h2 className="subtitle">Fullheight subtitle</h2>
-          </div>
-        </div>
-      </section>
+      <Resume />
     </>
   )
 }
