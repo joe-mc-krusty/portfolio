@@ -2,6 +2,7 @@ import React from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
+import Image from "../Image"
 
 import "./About.scss"
 
@@ -12,21 +13,19 @@ class About extends React.Component<AboutProps, AboutState> {
   render() {
     return (
       <section id="About" title="About" className="About">
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
-        <h2 className="title is-2">About Me</h2>
+        <div className="columns">
+          <div className="column is-2 is-offset-3">
+            <Image
+              className="about-pic"
+              filename="about-pic.png"
+              alt="About picture"
+              imgStyle={{
+                height: "450px",
+              }}
+            />
+          </div>
+          <div className="column is-2"></div>
+        </div>
       </section>
     )
   }
