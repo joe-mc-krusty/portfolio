@@ -1,3 +1,72 @@
-html, body {
+html,
+body {
   font-size: 1rem;
+}
+
+/******************/
+/* Helper classes */
+/******************/
+
+// ** Flex Container Properties ** //
+.flex-justify-content-start {
+  justify-content: flex-start;
+}
+.flex-justify-content-end {
+  justify-content: flex-end;
+}
+.flex-justify-content-center {
+  justify-content: center;
+}
+.flex-justify-content-around {
+  justify-content: space-around;
+}
+.flex-justify-content-between {
+  justify-content: space-between;
+}
+.flex-justify-content-evenly {
+  justify-content: space-evenly;
+}
+.flex-align-items-start {
+  align-items: flex-start;
+}
+.flex-align-items-end {
+  align-items: flex-end;
+}
+.flex-align-items-center {
+  align-items: center;
+}
+.flex-align-items-baseline {
+  align-items: baseline;
+}
+.flex-align-items-stretch {
+  align-items: stretch;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+// ** Flex Item Properties ** //
+.flex-align-self-start {
+  align-self: flex-start;
+}
+.flex-align-self-end {
+  align-self: flex-end;
+}
+.flex-align-self-center {
+  align-self: center;
+}
+.flex-align-self-baseline {
+  align-self: baseline;
+}
+.flex-align-self-stretch {
+  align-self: stretch;
+}
+.flex-align-self-auto {
+  align-self: auto;
 }
