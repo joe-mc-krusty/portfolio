@@ -1,5 +1,17 @@
+.hero-body {
+  .avatar-pic {
+    z-index: 1;
+    width: 128px;
+    picture {
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+}
 .hero-foot {
-  button{
+  button {
     margin-bottom: 1em;
+    z-index: 1;
   }
 }

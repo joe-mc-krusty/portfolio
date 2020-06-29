@@ -1,16 +1,13 @@
 import React from "react"
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll"
-import "./Hero.scss"
+import { Link } from "react-scroll"
+
 import ParticlesBg from "./ParticlesBg/ParticlesBg"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
+
+import Image from "../Image"
+import "./Hero.scss"
 
 interface HeroState {}
 
@@ -22,6 +19,15 @@ class Hero extends React.Component<HeroProps, HeroState> {
       <>
         <div className="hero-body">
           <div className="container has-text-centered">
+            <Image
+              className="avatar-pic image is-rounded is-inline-block"
+              filename="xsanna-crop.png"
+              alt="Avatar"
+              imgStyle={{
+                width: "128px",
+                height: "128px",
+              }}
+            />
             <h1 className="title is-1">Hi, I'm Xavier Sanna.</h1>
             <h2 className="subtitle is-5">
               Passionate developer & devops enthusiast based in France.
@@ -31,7 +37,13 @@ class Hero extends React.Component<HeroProps, HeroState> {
 
         <div className="hero-foot">
           <div className="container has-text-centered">
-            <Link to="About" smooth={true} duration={1200} offset={1}>
+            <Link
+              to="About"
+              smooth={true}
+              duration={1200}
+              offset={1}
+              className="scroll-button"
+            >
               <button className="button">
                 <span className="icon is-small">
                   <FontAwesomeIcon
