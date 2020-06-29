@@ -55,7 +55,7 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
   render() {
     return (
       <nav
-        className={`Navbar navbar is-fixed-top-desktop 
+        className={`Navbar navbar is-fixed-top-desktop is-hidden-touch
           ${this.setVisibility(this.state.scrollY)}
         `}
         role="navigation"
@@ -98,10 +98,50 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
             >
               About
             </Link>
-            <a className="navbar-item">Resume</a>
-            <a className="navbar-item">Works</a>
-            <a className="navbar-item">Blog</a>
-            <a className="navbar-item">Contact</a>
+            <Link
+              activeClass="is-active"
+              to="Resume"
+              spy={true}
+              smooth={true}
+              duration={1200}
+              offset={1}
+              className="navbar-item"
+            >
+              Resume
+            </Link>
+            <Link
+              activeClass="is-active"
+              to="Works"
+              spy={true}
+              smooth={true}
+              duration={1200}
+              offset={1}
+              className="navbar-item"
+            >
+              Works
+            </Link>
+            <Link
+              activeClass="is-active"
+              to="Blog"
+              spy={true}
+              smooth={true}
+              duration={1200}
+              offset={1}
+              className="navbar-item"
+            >
+              Blog
+            </Link>
+            <Link
+              activeClass="is-active"
+              to="Contact"
+              spy={true}
+              smooth={true}
+              duration={1200}
+              offset={1}
+              className="navbar-item"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </nav>
