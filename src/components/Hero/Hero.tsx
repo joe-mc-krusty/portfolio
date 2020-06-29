@@ -5,6 +5,11 @@ import ParticlesBg from "./ParticlesBg/ParticlesBg"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons"
+import {
+  faLinkedin,
+  faGithub,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons"
 
 import Image from "../Image"
 import "./Hero.scss"
@@ -30,8 +35,30 @@ class Hero extends React.Component<HeroProps, HeroState> {
             />
             <h1 className="title is-1">Hi, I'm Xavier Sanna.</h1>
             <h2 className="subtitle is-5">
-              Passionate developer & devops enthusiast based in France.
+              Passionate developer & devops enthusiast based in France. <br />I
+              speak React, Angular, NodeJS, PHP, Python, Linux, Docker &
+              Ansible.
             </h2>
+            <ul className="icons-list is-inline-block">
+              <li className="is-inline-block">
+                <a
+                  href="https://www.linkedin.com/in/xavier-sanna/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} size="4x" />
+                </a>
+              </li>
+              <li className="is-inline-block">
+                <a href="https://twitter.com/xavier_sanna" target="_blank">
+                  <FontAwesomeIcon icon={faTwitter} size="4x" />
+                </a>
+              </li>
+              <li className="is-inline-block">
+                <a href="https://github.com/joe-mc-krusty" target="_blank">
+                  <FontAwesomeIcon icon={faGithub} size="4x" />
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 

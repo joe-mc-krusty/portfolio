@@ -8,6 +8,20 @@
       }
     }
   }
+  .icons-list {
+    position: relative;
+    z-index: 2;
+    li {
+      margin: 0 1.5em;
+      a {
+        color: #ffffff;
+
+        &:hover {
+          scale: 2;
+        }
+      }
+    }
+  }
 }
 .hero-foot {
   button {
