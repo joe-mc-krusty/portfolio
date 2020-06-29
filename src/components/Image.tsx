@@ -7,15 +7,18 @@ interface ImageProps {
   filename: string
   alt: string
   style?: object | undefined
-  imageStyle?: object | undefined
+  imgStyle?: object | undefined
   className?: string | object | undefined
+  size?: string | undefined
+  Tag?: string | undefined
+  fadeIn?: boolean | undefined
 }
 
 export default (props: ImageProps) => (
   <StaticQuery
     query={graphql`
       query {
-        images: allFile(filter: { sourceInstanceName: { eq: "images"} }) {
+        images: allFile(filter: { sourceInstanceName: { eq: "images" } }) {
           edges {
             node {
               relativePath
@@ -41,11 +44,13 @@ export default (props: ImageProps) => (
       const imageSizes = image.node.childImageSharp.sizes
       return (
         <Img
+          Tag={props.Tag}
           alt={props.alt}
           sizes={imageSizes}
           style={props.style}
-          imgStyle={props.imageStyle}
+          imgStyle={props.imgStyle}
           className={props.className}
+          fadeIn={props.fadeIn}
         />
       )
     }}
