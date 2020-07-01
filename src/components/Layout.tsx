@@ -33,6 +33,7 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Navbar hideOffset={250} />
+      <Navbar hideOffset={200} />
       <HeroWrapper className="hero is-primary is-fullheight">
         <Hero />
       </HeroWrapper>
