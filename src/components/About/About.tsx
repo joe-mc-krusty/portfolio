@@ -15,14 +15,14 @@ class About extends React.Component<AboutProps, AboutState> {
       <section id="About" title="About" className="About">
         <div className="columns">
           <div className="column is-6 is-offset-3">
-          <h2 className="title is-2">About me</h2>
+            <h2 className="title is-2">About me</h2>
             <Image
               className="about-pic"
               filename="about-pic.png"
               alt="About picture"
               imgStyle={{}}
             />
-            
+
             <p className="content">
               I started my dev adventure as a <strong>PHP</strong> developer and
               have worked on quite a few frameworks and CMSs, notably{" "}
@@ -45,7 +45,7 @@ class About extends React.Component<AboutProps, AboutState> {
               system scripts, <strong>Python</strong> is my partner of choice.
             </p>
             <p className="content">
-              Based in France but have no problem with working 100% remote, as
+              Based in France but have no issue working 100% remote, as
               I'm familiar with most commonly used collaboration tools:{" "}
               <strong>Slack</strong>, <strong>Microsoft Teams</strong>,{" "}
               <strong>CodeStream</strong>, <strong>Github</strong>,{" "}
@@ -56,9 +56,8 @@ class About extends React.Component<AboutProps, AboutState> {
             </p>
             <p className="content">
               Formerly expatriated in the Philippines for several years, I'm now
-              living back in my home country and a proud dad of 3. During free
-              time I like spending time with my kids, reading and learning about
-              new techs & learning foreign languages.
+              living back in my home country and a proud dad of 3. When not coding I like spending time with my kids, reading & learning about
+              new techs, learning foreign languages & playing music instruments.
             </p>
             <p>Arch linux is my daily driver. I use Arch btw.</p>
           </div>
