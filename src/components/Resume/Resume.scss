@@ -1,4 +1,52 @@
 .Resume {
   padding: 6em 0;
-  background-color: #ffffff;
+  background-color: rgb(227, 227, 227);
+
+  .vertical-timeline {
+    margin: 0 0;
+    width: 100%;
+  }
+
+  .vertical-timeline-element-content p {
+    margin: 0;
+  }
+
+  .header-card {
+    &.color-purple {
+      background-color: #c56bc6;
+    }
+
+    &.color-blue {
+      background-color: #5d91b2;
+    }
+    
+    p {
+      &.title {
+        margin-bottom: 5px;
+      }
+      &.subtitle {
+        //margin-left: -5px;
+      }
+      color: #ffffff;
+    }
+  }
+
+  .skills-card {
+    ul {
+      li {
+        margin: 10px 0;
+      }
+    }
+
+    &.color-purple {
+      svg {
+        color: #c56bc6;
+      }
+    }
+    &.color-blue {
+      svg {
+        color: #5d91b2;
+      }
+    }
+  }
 }

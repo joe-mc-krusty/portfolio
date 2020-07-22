@@ -2,14 +2,15 @@ import React from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
-  faJsSquare,
-  faPhp,
-  faMagento,
-  faWordpress,
-  faSymfony,
-  faPython,
-  faLinux,
-} from "@fortawesome/free-brands-svg-icons"
+  faSuitcase,
+  faMapMarkerAlt,
+  faBuilding,
+  faServer,
+  faCode,
+  faUser,
+  faPlane,
+  faGraduationCap,
+} from "@fortawesome/free-solid-svg-icons"
 
 import {
   VerticalTimeline,
@@ -19,6 +20,22 @@ import {
 import Image from "../Image"
 
 import "./Resume.scss"
+import {
+  faPhp,
+  faJs,
+  faLinux,
+  faPython,
+  faDocker,
+  faAngular,
+  faGitlab,
+  faNodeJs,
+  faMagento,
+  faGulp,
+  faConfluence,
+  faWordpress,
+  faBootstrap,
+  faSymfony,
+} from "@fortawesome/free-brands-svg-icons"
 
 interface ResumeProps {}
 interface ResumeState {}
@@ -34,176 +51,343 @@ class Resume extends React.Component<ResumeProps, ResumeState> {
         </div>
         <div className="columns">
           <div className="column is-6 is-offset-3">
-            <h3 className="subtitle is-3">Work</h3>
+            <h3 className="subtitle is-3">Work & Education</h3>
             <VerticalTimeline>
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                contentStyle={{
-                  background: "rgb(33, 150, 243)",
-                  color: "#fff",
-                }}
-                contentArrowStyle={{
-                  borderRight: "7px solid  rgb(33, 150, 243)",
-                }}
-                date="Dec 2018 - present"
-                iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-                icon={[
-                  <FontAwesomeIcon icon={faJsSquare} />,
-                  <FontAwesomeIcon icon={faPhp} />,
-                  <FontAwesomeIcon icon={faPython} />,
-                  <FontAwesomeIcon icon={faLinux} />,
-                ]}
+                date="Dec 2018 - Present"
+                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                icon={[<FontAwesomeIcon fixedWidth icon={faSuitcase} />]}
               >
-                <h3 className="vertical-timeline-element-title">
-                  Fullstack Developer / Devops
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle subtitle">
-                  Tremblay-en-France, France
-                </h4>
-                <p>
-                  Creative Direction, User Experience, Visual Design, Project
-                  Management, Team Leading
-                </p>
+                <div className="card header-card color-blue">
+                  <div className="card-content">
+                    <p className="title is-5 is-spaced">
+                      Fullstack Dev & Devops
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faBuilding} /> Waynium
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faMapMarkerAlt} />{" "}
+                      Tremblay-en-France, France
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card skills-card color-blue">
+                  <div className="card-content">
+                    <ul>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faPhp} /> PHP backend
+                        development (company framework based on Zend).
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faJs} /> Vanilla JS
+                        frontend development.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faAngular} /> Mobile
+                        application development with Ionic 5 & Angular 8/9.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faLinux} />{" "}
+                        Infrastructure automation and deployments with Ansible.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faPython} /> CLI tools
+                        development with Python.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faGitlab} /> CI/CD
+                        with Gitlab CI.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faDocker} />{" "}
+                        Application deployment with Docker.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faNodeJs} /> Backend
+                        development with NodeJS (NestJS framework).
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </VerticalTimelineElement>
+
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="May 2017 - July 2018"
-                iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-                icon={[
-                  <FontAwesomeIcon icon={faMagento} />,
-                  <FontAwesomeIcon icon={faJsSquare} />,
-                ]}
+                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                icon={[<FontAwesomeIcon fixedWidth icon={faSuitcase} />]}
               >
-                <h3 className="vertical-timeline-element-title">
-                  Magento Developer
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                  Roissy-en-France, France
-                </h4>
-                <p>
-                  Creative Direction, User Experience, Visual Design, SEO,
-                  Online Marketing
-                </p>
+                <div className="card header-card color-blue">
+                  <div className="card-content">
+                    <p className="title is-5 is-spaced">
+                      PHP Magento Developer
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faBuilding} /> Hotels at
+                      Home
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faMapMarkerAlt} />{" "}
+                      Roissy-en-France, France
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card skills-card color-blue">
+                  <div className="card-content">
+                    <ul>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faMagento} /> Magento
+                        multisite backend development & maintenance.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faGulp} /> Development
+                        of various tools & libs with Gulp.
+                        <br /> They were integrated in Magento frontend
+                        development workflow.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faJs} /> Multiple
+                        E-commerce websites frontend development & maintenance.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faServer} />{" "}
+                        Load-balanced frontend LAMP servers maintenance.
+                      </li>
+
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faConfluence} />{" "}
+                        Technical documentation written in both French & English
+                        with Confluence.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </VerticalTimelineElement>
+
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2008 - 2010"
-                iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-                icon={[
-                  <FontAwesomeIcon icon={faWordpress} />,
-                ]}
+                date="Dec 2016 to Apr 2017"
+                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                icon={[<FontAwesomeIcon fixedWidth icon={faSuitcase} />]}
               >
-                <h3 className="vertical-timeline-element-title">
-                  Wordpress Developer
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                  Manila, Philippines (remote)
-                </h4>
-                <p>User Experience, Visual Design</p>
+                <div className="card header-card color-blue">
+                  <div className="card-content">
+                    <p className="title is-5 is-spaced">
+                      PHP Wordpress Developer
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faBuilding} /> E-Dublin
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faMapMarkerAlt} />{" "}
+                      Manila, Philippines (remote)
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card skills-card color-blue">
+                  <div className="card-content">
+                    <ul>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faWordpress} />{" "}
+                        Maintaining & improving existing wordpress application
+                        (backend apps & frontend).
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faBootstrap} />{" "}
+                        HTML/CSS integration with Bootstrap.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </VerticalTimelineElement>
+
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="2006 - 2008"
-                iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-                icon={[
-                  <FontAwesomeIcon icon={faSymfony} />,
-                ]}
+                date="Jun 2016 to Dec 2016"
+                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                icon={[<FontAwesomeIcon fixedWidth icon={faSuitcase} />]}
               >
-                <h3 className="vertical-timeline-element-title">
-                  Symfony developer
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                  Tagaytay, Philippines
-                </h4>
-                <p>User Experience, Visual Design</p>
+                <div className="card header-card color-blue">
+                  <div className="card-content">
+                    <p className="title is-5 is-spaced">Symfony 3 Developer</p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faBuilding} /> Towertech
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faMapMarkerAlt} />{" "}
+                      Tagaytay, Philippines (remote)
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card skills-card color-blue">
+                  <div className="card-content">
+                    <ul>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faSymfony} /> Company
+                        management tools & e-commerce solution development on
+                        Symfony 3.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faBootstrap} />{" "}
+                        HTML/CSS integration with Bootstrap.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </VerticalTimelineElement>
+
               <VerticalTimelineElement
-                className="vertical-timeline-element--education"
-                date="April 2013"
-                iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-                icon={
-                  <Image
-                    className="avatar-pic image is-rounded is-inline-block"
-                    filename="xsanna-crop.png"
-                    alt="Avatar"
-                    imgStyle={{
-                      width: "128px",
-                      height: "128px",
-                    }}
-                  />
-                }
+                className="vertical-timeline-element--work"
+                date="Jan 2014 to June 2016"
+                iconStyle={{ background: "#C56BC6", color: "#fff" }}
+                icon={[<FontAwesomeIcon fixedWidth icon={faPlane} />]}
               >
-                <h3 className="vertical-timeline-element-title">
-                  Content Marketing for Web, Mobile and Social Media
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                  Online Course
-                </h4>
-                <p>Strategy, Social Media</p>
+                <div className="card header-card color-purple">
+                  <div className="card-content">
+                    <p className="title is-5 is-spaced">
+                      Expatriation in The Philippines
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faBuilding} /> Myself
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faMapMarkerAlt} />{" "}
+                      Philippines
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card skills-card color-purple">
+                  <div className="card-content">
+                    <ul>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faGraduationCap} />{" "}
+                        Self-teaching web development.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faPhp} /> Working on a
+                        few freelance missions to practice.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </VerticalTimelineElement>
+
               <VerticalTimelineElement
-                className="vertical-timeline-element--education"
-                date="November 2012"
-                iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-                icon={
-                  <Image
-                    className="avatar-pic image is-rounded is-inline-block"
-                    filename="xsanna-crop.png"
-                    alt="Avatar"
-                    imgStyle={{
-                      width: "128px",
-                      height: "128px",
-                    }}
-                  />
-                }
+                className="vertical-timeline-element--work"
+                date="Sep 2013 to Dec 2013"
+                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                icon={[<FontAwesomeIcon fixedWidth icon={faSuitcase} />]}
               >
-                <h3 className="vertical-timeline-element-title">
-                  Agile Development Scrum Master
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                  Certification
-                </h4>
-                <p>Creative Direction, User Experience, Visual Design</p>
+                <div className="card header-card color-blue">
+                  <div className="card-content">
+                    <p className="title is-5 is-spaced">
+                      PHP Developer Internship
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faBuilding} /> General
+                      Web
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faMapMarkerAlt} />{" "}
+                      Paris, France
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card skills-card color-blue">
+                  <div className="card-content">
+                    <ul>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faPhp} /> PHP
+                        development on WHMCS.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </VerticalTimelineElement>
+
               <VerticalTimelineElement
-                className="vertical-timeline-element--education"
-                date="2002 - 2006"
-                iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-                icon={
-                  <Image
-                    className="avatar-pic image is-rounded is-inline-block"
-                    filename="xsanna-crop.png"
-                    alt="Avatar"
-                    imgStyle={{
-                      width: "128px",
-                      height: "128px",
-                    }}
-                  />
-                }
+                className="vertical-timeline-element--work"
+                date="Nov 2011 to Sep 2013"
+                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                icon={[<FontAwesomeIcon fixedWidth icon={faSuitcase} />]}
               >
-                <h3 className="vertical-timeline-element-title">
-                  Bachelor of Science in Interactive Digital Media Visual
-                  Imaging
-                </h3>
-                <h4 className="vertical-timeline-element-subtitle">
-                  Bachelor Degree
-                </h4>
-                <p>Creative Direction, Visual Design</p>
+                <div className="card header-card color-blue">
+                  <div className="card-content">
+                    <p className="title is-5 is-spaced">
+                      IT Manager Assistant (Cooperative education)
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faBuilding} /> CCL Label
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faMapMarkerAlt} />{" "}
+                      Moussy-Le-Neuf, France
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card skills-card color-blue">
+                  <div className="card-content">
+                    <ul>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faCode} /> Development
+                        of production monitoring & users tools (VB.NET).
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faServer} /> Company
+                        network & IT stock management.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faUser} /> On-site
+                        user support.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </VerticalTimelineElement>
+
               <VerticalTimelineElement
-                iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-                icon={
-                  <Image
-                    className="avatar-pic image is-rounded is-inline-block"
-                    filename="xsanna-crop.png"
-                    alt="Avatar"
-                    imgStyle={{
-                      width: "128px",
-                      height: "128px",
-                    }}
-                  />
-                }
-              />
+                className="vertical-timeline-element--work"
+                date="Oct 2011 to Jun 2013"
+                iconStyle={{ background: "#C56BC6", color: "#fff" }}
+                icon={[<FontAwesomeIcon fixedWidth icon={faGraduationCap} />]}
+              >
+                <div className="card header-card color-purple">
+                  <div className="card-content">
+                    <p className="title is-5 is-spaced">BTS SIO (SLAM)</p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faBuilding} /> ETS IRIS
+                    </p>
+                    <p className="subtitle is-6">
+                      <FontAwesomeIcon fixedWidth icon={faMapMarkerAlt} />{" "}
+                      Paris, France
+                    </p>
+                  </div>
+                </div>
+
+                <div className="card skills-card color-purple">
+                  <div className="card-content">
+                    <ul>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faCode} /> Learning
+                        the basics & essentials of coding.
+                      </li>
+                      <li>
+                        <FontAwesomeIcon fixedWidth icon={faServer} /> Learning
+                        the basics & essentials of networking.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </VerticalTimelineElement>
             </VerticalTimeline>
           </div>
         </div>
