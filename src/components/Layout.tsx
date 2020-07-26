@@ -14,6 +14,10 @@ import HeroWrapper from "./HeroWrapper/HeroWrapper"
 import Navbar from "./Navbar/Navbar"
 import About from "./About/About"
 import Resume from "./Resume/Resume"
+import Skills from "./Skills/Skills"
+
+import skillData from "../data/skills"
+import subSkillData from "../data/sub-skills"
 
 interface Props {
   children?: any
@@ -39,6 +43,7 @@ const Layout = ({ children }: Props) => {
       </HeroWrapper>
       <About />
       <Resume />
+      <Skills items={skillData} subItems={subSkillData} />
     </>
   )
 }

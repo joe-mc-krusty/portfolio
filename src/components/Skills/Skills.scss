@@ -1,0 +1,148 @@
+.Skills {
+  padding: 6em 0;
+
+  progress {
+    margin-top: 0.35em;
+  }
+
+  .skill {
+    &.black {
+      .icon-container {
+        background-color: #000000;
+      }
+      .title {
+        color: #000000;
+      }
+    }
+
+    &.dark {
+      .icon-container {
+        background-color: #363636;
+      }
+      .title {
+        color: #363636;
+      }
+    }
+
+    &.yellow {
+      .icon-container {
+        background-color: #ffdd57;
+      }
+      .title {
+        color: #ffdd57;
+      }
+    }
+
+    &.darkgreen {
+      .icon-container {
+        background-color: #00d1b2;
+      }
+      .title {
+        color: #00d1b2;
+      }
+    }
+
+    &.green {
+      .icon-container {
+        background-color: #23d160;
+      }
+      .title {
+        color: #23d160;
+      }
+    }
+
+    &.red {
+      .icon-container {
+        background-color: #ff3860;
+      }
+      .title {
+        color: #ff3860;
+      }
+    }
+
+    &.blue {
+      .icon-container {
+        background-color: #3273dc;
+      }
+      .title {
+        color: #3273dc;
+      }
+    }
+
+    &.lightblue {
+      .icon-container {
+        background-color: #209cee;
+      }
+      .title {
+        color: #209cee;
+      }
+    }
+
+    &.purple {
+      .icon-container {
+        background-color: #800080;
+      }
+      .title {
+        color: #800080;
+      }
+    }
+
+    &.orange {
+      .icon-container {
+        background-color: #f5865d;
+      }
+      .title {
+        color: #f5865d;
+      }
+    }
+
+    .card {
+      height: 280px;
+    }
+
+    .card-content {
+      text-align: center;
+
+      .icon-container {
+        margin: auto;
+        display: flex;
+        color: #fff;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        justify-content: center;
+
+        .svg-custom-icon {
+          display: block;
+        }
+
+        .iconify-icon {
+          width: 3em;
+          height: 3em;
+        }
+      }
+
+      .title {
+        margin-top: 1em;
+      }
+
+      ul {
+        li {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .subskill {
+    text-align: center;
+    .iconify-icon {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    .label {
+
+    }
+  }
+}
