@@ -24,9 +24,9 @@ import vimIcon from "@iconify/icons-logos/vim"
 import phpStormIcon from "@iconify/icons-logos/phpstorm"
 import vsCodeIcon from "@iconify/icons-logos/visual-studio-code"
 import slackIcon from "@iconify/icons-logos/slack"
-import mstIcon from '@iconify/icons-mdi/microsoft-teams';
-import npmIcon from '@iconify/icons-logos/npm';
-import yarnIcon from '@iconify/icons-logos/yarn';
+import mstIcon from "@iconify/icons-mdi/microsoft-teams"
+import npmIcon from "@iconify/icons-logos/npm"
+import yarnIcon from "@iconify/icons-logos/yarn"
 
 const subSkillData = [
   {
