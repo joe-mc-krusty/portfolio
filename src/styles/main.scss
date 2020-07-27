@@ -3,6 +3,10 @@ body {
   font-size: 1rem;
 }
 
+section.block-section {
+  padding: 3.5em 0;
+}
+
 /******************/
 /* Helper classes */
 /******************/
@@ -79,3 +83,4 @@ body {
 .float-right {
   float: right;
 }
+
