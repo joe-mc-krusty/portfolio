@@ -1,7 +1,7 @@
 .About {
-  padding: 6em 0;
   background-color: #111118;
   color: #ffffff;
+
   .about-pic {
     height: 400px;
     width: 200px;
@@ -12,5 +12,10 @@
   .title {
     color: #ffffff;
   }
-}
 
+  p {
+    strong {
+      color: #a484ac;
+    }
+  }
+}

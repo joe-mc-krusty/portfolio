@@ -24,7 +24,7 @@ class Hero extends React.Component<HeroProps, HeroState> {
       <>
         <div className="hero-body">
           <div className="container has-text-centered">
-            <Image
+            {/* <Image
               className="avatar-pic image is-rounded is-inline-block"
               filename="xsanna-crop.png"
               alt="Avatar"
@@ -32,7 +32,7 @@ class Hero extends React.Component<HeroProps, HeroState> {
                 width: "128px",
                 height: "128px",
               }}
-            />
+            /> */}
             <h1 className="title is-1">Hi, I'm Xavier Sanna.</h1>
             <h2 className="subtitle is-5">
               Passionate developer & devops enthusiast based in France. <br />I

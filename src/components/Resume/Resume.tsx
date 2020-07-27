@@ -43,7 +43,7 @@ interface ResumeState {}
 class Resume extends React.Component<ResumeProps, ResumeState> {
   render() {
     return (
-      <section id="Resume" title="Resume" className="Resume">
+      <section id="Resume" title="Resume" className="Resume block-section">
         <div className="columns">
           <div className="column is-6 is-offset-3">
             <h2 className="title is-2">Resume</h2>

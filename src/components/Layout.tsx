@@ -15,7 +15,8 @@ import Navbar from "./Navbar/Navbar"
 import About from "./About/About"
 import Resume from "./Resume/Resume"
 import Skills from "./Skills/Skills"
-
+import Languages from "./Languages/Languages"
+import Works from "./Works/Works"
 import skillData from "../data/skills"
 import subSkillData from "../data/sub-skills"
 
@@ -44,6 +45,8 @@ const Layout = ({ children }: Props) => {
       <About />
       <Resume />
       <Skills items={skillData} subItems={subSkillData} />
+      <Languages />
+      <Works />
     </>
   )
 }

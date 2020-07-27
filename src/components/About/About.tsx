@@ -12,7 +12,7 @@ interface AboutState {}
 class About extends React.Component<AboutProps, AboutState> {
   render() {
     return (
-      <section id="About" title="About" className="About">
+      <section id="About" title="About" className="About block-section">
         <div className="columns">
           <div className="column is-6 is-offset-3">
             <h2 className="title is-2">About me</h2>

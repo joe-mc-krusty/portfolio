@@ -13,7 +13,6 @@ interface SkillCard {
 interface SubSkillCard {
   label: string
   icon: any
-  color: string
 }
 
 interface SkillsProps {
@@ -41,13 +40,20 @@ class Skills extends React.Component<SkillsProps, {}> {
     return items.map((item, index) => {
       return (
         <div
-          className={`column is-3-fullhd is-2-tablet is-1-mobile skill ${item.color}`}
+          className="column is-3-fullhd is-2-tablet is-1-mobile skill"
           key={`skill-item-${index}`}
         >
           <div className="card">
             <div className="card-content text-center">
-              <div className="icon-container">{item.icon}</div>
-              <p className="title is-4 is-block">{item.label}</p>
+              <div
+                className="icon-container"
+                style={{ backgroundColor: item.color }}
+              >
+                {item.icon}
+              </div>
+              <p className="title is-4 is-block" style={{ color: item.color }}>
+                {item.label}
+              </p>
               <p>{item.description}</p>
             </div>
           </div>
@@ -71,7 +77,7 @@ class Skills extends React.Component<SkillsProps, {}> {
 
   render() {
     return (
-      <section id="Skills" title="Skills" className="Skills">
+      <section id="Skills" title="Skills" className="Skills block-section">
         <div className="columns">
           <div className="column is-6 is-offset-3">
             <h2 className="title is-2">Skills</h2>
@@ -84,9 +90,13 @@ class Skills extends React.Component<SkillsProps, {}> {
         </div>
         <div className="columns">
           <div className="column is-6 is-offset-3">
+            <h3 className="title is-3">Some More...</h3>
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column is-6 is-offset-3">
             <div className="card">
               <div className="card-content">
-                <p className="title is-5">Some More...</p>
                 <Slider {...this.sliderSettings}>
                   {this.renderSubSkills()}
                 </Slider>

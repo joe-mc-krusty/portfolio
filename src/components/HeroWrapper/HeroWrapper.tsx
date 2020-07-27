@@ -14,7 +14,7 @@ const HeroWrapper = ({ className, children }: HeroWrapperProps) => {
   const { desktop } = useStaticQuery(
     graphql`
       query {
-        desktop: file(relativePath: { eq: "bg-4.jpg" }) {
+        desktop: file(relativePath: { eq: "bg-2.jpg" }) {
           childImageSharp {
             fluid(quality: 90, maxWidth: 4160) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
