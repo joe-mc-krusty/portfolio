@@ -7,7 +7,7 @@ import SEO from "../components/Seo"
 import "../fonts/undefined-medium.woff2"
 const IndexPage = () => (
   <Layout>
-    <SEO title="" />
+    <SEO title="Xavier Sanna" />
   </Layout>
 )
 
