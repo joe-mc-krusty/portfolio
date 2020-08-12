@@ -41,12 +41,14 @@ interface ResumeProps {}
 interface ResumeState {}
 
 class Resume extends React.Component<ResumeProps, ResumeState> {
+  private timelineColor = "#3273DC"
+  
   render() {
     return (
       <section id="Resume" title="Resume" className="Resume block-section">
         <div className="columns">
           <div className="column is-6 is-offset-3">
-            <h2 className="title is-2">Resume</h2>
+            <h2 className="main-title title is-2">Resume</h2>
           </div>
         </div>
         <div className="columns">
@@ -56,7 +58,7 @@ class Resume extends React.Component<ResumeProps, ResumeState> {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="Dec 2018 - Present"
-                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                iconStyle={{ background: this.timelineColor, color: "#fff" }}
                 icon={<FontAwesomeIcon fixedWidth icon={faSuitcase} />}
               >
                 <div className="card header-card color-blue">
@@ -117,7 +119,7 @@ class Resume extends React.Component<ResumeProps, ResumeState> {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="May 2017 - July 2018"
-                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                iconStyle={{ background: this.timelineColor, color: "#fff" }}
                 icon={<FontAwesomeIcon fixedWidth icon={faSuitcase} />}
               >
                 <div className="card header-card color-blue">
@@ -171,7 +173,7 @@ class Resume extends React.Component<ResumeProps, ResumeState> {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="Dec 2016 to Apr 2017"
-                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                iconStyle={{ background: this.timelineColor, color: "#fff" }}
                 icon={<FontAwesomeIcon fixedWidth icon={faSuitcase} />}
               >
                 <div className="card header-card color-blue">
@@ -209,7 +211,7 @@ class Resume extends React.Component<ResumeProps, ResumeState> {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="Jun 2016 to Dec 2016"
-                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                iconStyle={{ background: this.timelineColor, color: "#fff" }}
                 icon={<FontAwesomeIcon fixedWidth icon={faSuitcase} />}
               >
                 <div className="card header-card color-blue">
@@ -245,7 +247,7 @@ class Resume extends React.Component<ResumeProps, ResumeState> {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="Jan 2014 to June 2016"
-                iconStyle={{ background: "#C56BC6", color: "#fff" }}
+                iconStyle={{ background: this.timelineColor, color: "#fff" }}
                 icon={<FontAwesomeIcon fixedWidth icon={faPlane} />}
               >
                 <div className="card header-card color-purple">
@@ -282,7 +284,7 @@ class Resume extends React.Component<ResumeProps, ResumeState> {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="Sep 2013 to Dec 2013"
-                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                iconStyle={{ background: this.timelineColor, color: "#fff" }}
                 icon={<FontAwesomeIcon fixedWidth icon={faSuitcase} />}
               >
                 <div className="card header-card color-blue">
@@ -316,7 +318,7 @@ class Resume extends React.Component<ResumeProps, ResumeState> {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="Nov 2011 to Sep 2013"
-                iconStyle={{ background: "#5d91b2", color: "#fff" }}
+                iconStyle={{ background: this.timelineColor, color: "#fff" }}
                 icon={<FontAwesomeIcon fixedWidth icon={faSuitcase} />}
               >
                 <div className="card header-card color-blue">
@@ -357,7 +359,7 @@ class Resume extends React.Component<ResumeProps, ResumeState> {
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="Oct 2011 to Jun 2013"
-                iconStyle={{ background: "#C56BC6", color: "#fff" }}
+                iconStyle={{ background: this.timelineColor, color: "#fff" }}
                 icon={<FontAwesomeIcon fixedWidth icon={faGraduationCap} />}
               >
                 <div className="card header-card color-purple">

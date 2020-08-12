@@ -80,7 +80,7 @@ class Skills extends React.Component<SkillsProps, {}> {
       <section id="Skills" title="Skills" className="Skills block-section">
         <div className="columns">
           <div className="column is-6 is-offset-3">
-            <h2 className="title is-2">Skills</h2>
+            <h2 className="title is-2 has-text-white">Skills</h2>
           </div>
         </div>
         <div className="columns">
@@ -90,7 +90,7 @@ class Skills extends React.Component<SkillsProps, {}> {
         </div>
         <div className="columns">
           <div className="column is-6 is-offset-3">
-            <h3 className="title is-3">Some More...</h3>
+            <h3 className="title is-3 has-text-white">Some More...</h3>
           </div>
         </div>
         <div className="columns">

@@ -1,4 +1,5 @@
 .Resume {
+  //background-color: rgb(227, 227, 227);
   background-color: rgb(227, 227, 227);
 
   .vertical-timeline {
@@ -10,13 +11,14 @@
     margin: 0;
   }
 
+  
   .header-card {
     &.color-purple {
-      background-color: #c56bc6;
+      background-color: #3273DC;
     }
 
     &.color-blue {
-      background-color: #5d91b2;
+      background-color: #3273DC;
     }
     
     p {
@@ -39,12 +41,12 @@
 
     &.color-purple {
       svg {
-        color: #c56bc6;
+        color: #3273DC;
       }
     }
     &.color-blue {
       svg {
-        color: #5d91b2;
+        color: #3273DC;
       }
     }
   }

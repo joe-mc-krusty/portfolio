@@ -1,6 +1,7 @@
 import React from "react"
 
 import { Icon as Iconify } from "@iconify/react"
+import jsIcon from "@iconify/icons-logos/javascript"
 import ansibleIcon from "@iconify/icons-cib/ansible"
 import ovhIcon from "@iconify/icons-cib/ovh"
 import magentoIcon from "@iconify/icons-cib/magento"
@@ -26,6 +27,7 @@ import {
   faGitlab,
 } from "@fortawesome/free-brands-svg-icons"
 
+
 const skillData = [
   {
     label: "Javascript",
@@ -37,7 +39,7 @@ const skillData = [
         size="3x"
       />
     ),
-    color: "yellow",
+    color: "#1c51a5",
     description: "ES6",
   },
   {
@@ -50,7 +52,7 @@ const skillData = [
         size="3x"
       />
     ),
-    color: "red",
+    color: "#1c51a5",
     description: "Version 8/9",
   },
   {
@@ -63,7 +65,7 @@ const skillData = [
         size="3x"
       />
     ),
-    color: "blue",
+    color: "#1c51a5",
     description: "Redux Next.js Gatsby",
   },
   {
@@ -74,7 +76,7 @@ const skillData = [
         icon={ansibleIcon}
       />
     ),
-    color: "black",
+    color: "#1c51a5",
     description: "CLI & Ansible Tower/AWX",
   },
   {
@@ -82,7 +84,7 @@ const skillData = [
     icon: (
       <Iconify className="flex-align-self-center iconify-icon" icon={ovhIcon} />
     ),
-    color: "lightblue",
+    color: "#1c51a5",
     description: "Public Cloud",
   },
   {
@@ -95,143 +97,8 @@ const skillData = [
         size="3x"
       />
     ),
-    color: "darkgreen",
+    color: "#1c51a5",
     description: "CLI, Images and Compose",
-  },
-  {
-    label: "PHP",
-    icon: (
-      <FontAwesomeIcon
-        className="flex-align-self-center"
-        fixedWidth
-        icon={faPhp}
-        size="3x"
-      />
-    ),
-    color: "dark",
-    description: "v5.6 & v7+",
-  },
-  {
-    label: "Magento",
-    icon: (
-      <Iconify
-        className="flex-align-self-center iconify-icon"
-        icon={magentoIcon}
-      />
-    ),
-    color: "green",
-    description: "v1.9",
-  },
-  {
-    label: "Symfony",
-    icon: (
-      <FontAwesomeIcon
-        className="flex-align-self-center"
-        fixedWidth
-        icon={faSymfony}
-        size="3x"
-      />
-    ),
-    color: "purple",
-    description: "v3 & v4",
-  },
-  {
-    label: "Python",
-    icon: (
-      <FontAwesomeIcon
-        className="flex-align-self-center"
-        fixedWidth
-        icon={faPython}
-        size="3x"
-      />
-    ),
-    color: "orange",
-    description: "Cement Framework",
-  },
-  {
-    label: "Ionic",
-    icon: (
-      <Iconify
-        className="flex-align-self-center iconify-icon"
-        icon={ionicIcon}
-      />
-    ),
-    color: "blue",
-    description: "v5",
-  },
-  {
-    label: "Wordpress",
-    icon: (
-      <FontAwesomeIcon
-        className="flex-align-self-center"
-        fixedWidth
-        icon={faWordpress}
-        size="3x"
-      />
-    ),
-    color: "red",
-    description: "Themes & Plugins",
-  },
-  {
-    label: "Debian",
-    icon: (
-      <Iconify
-        className="flex-align-self-center iconify-icon"
-        icon={debianIcon}
-      />
-    ),
-    color: "black",
-    description: "Server Distro",
-  },
-  {
-    label: "Arch",
-    icon: (
-      <Iconify
-        className="flex-align-self-center iconify-icon"
-        icon={archIcon}
-      />
-    ),
-    color: "lightblue",
-    description: "I use Arch btw",
-  },
-  {
-    label: "Gulp",
-    icon: (
-      <FontAwesomeIcon
-        className="flex-align-self-center"
-        fixedWidth
-        icon={faGulp}
-        size="3x"
-      />
-    ),
-    color: "darkgreen",
-    description: "v3 & v4",
-  },
-  {
-    label: "Sass",
-    icon: (
-      <FontAwesomeIcon
-        className="flex-align-self-center"
-        fixedWidth
-        icon={faSass}
-        size="3x"
-      />
-    ),
-    color: "dark",
-    description: "Scss",
-  },
-  {
-    label: "Bootstrap",
-    icon: (
-      <FontAwesomeIcon
-        className="flex-align-self-center"
-        fixedWidth
-        icon={faBootstrap}
-        size="3x"
-      />
-    ),
-    color: "purple",
-    description: "v3 & v4",
   },
   {
     label: "Node",
@@ -243,7 +110,7 @@ const skillData = [
         size="3x"
       />
     ),
-    color: "green",
+    color: "#1c51a5",
     description: "NestJS framework",
   },
   {
@@ -251,7 +118,7 @@ const skillData = [
     icon: (
       <Iconify className="flex-align-self-center iconify-icon" icon={tsIcon} />
     ),
-    color: "orange",
+    color: "#1c51a5",
     description: "v3",
   },
   {
@@ -264,8 +131,143 @@ const skillData = [
         size="3x"
       />
     ),
-    color: "yellow",
+    color: "#1c51a5",
     description: "CI/CD Pipelines",
+  },
+  {
+    label: "PHP",
+    icon: (
+      <FontAwesomeIcon
+        className="flex-align-self-center"
+        fixedWidth
+        icon={faPhp}
+        size="3x"
+      />
+    ),
+    color: "#1c51a5",
+    description: "v5.6 & v7+",
+  },
+  {
+    label: "Magento",
+    icon: (
+      <Iconify
+        className="flex-align-self-center iconify-icon"
+        icon={magentoIcon}
+      />
+    ),
+    color: "#1c51a5",
+    description: "v1.9",
+  },
+  {
+    label: "Symfony",
+    icon: (
+      <FontAwesomeIcon
+        className="flex-align-self-center"
+        fixedWidth
+        icon={faSymfony}
+        size="3x"
+      />
+    ),
+    color: "#1c51a5",
+    description: "v3 & v4",
+  },
+  {
+    label: "Python",
+    icon: (
+      <FontAwesomeIcon
+        className="flex-align-self-center"
+        fixedWidth
+        icon={faPython}
+        size="3x"
+      />
+    ),
+    color: "#1c51a5",
+    description: "Cement Framework",
+  },
+  {
+    label: "Ionic",
+    icon: (
+      <Iconify
+        className="flex-align-self-center iconify-icon"
+        icon={ionicIcon}
+      />
+    ),
+    color: "#1c51a5",
+    description: "v5",
+  },
+  {
+    label: "Wordpress",
+    icon: (
+      <FontAwesomeIcon
+        className="flex-align-self-center"
+        fixedWidth
+        icon={faWordpress}
+        size="3x"
+      />
+    ),
+    color: "#1c51a5",
+    description: "Themes & Plugins",
+  },
+  {
+    label: "Debian",
+    icon: (
+      <Iconify
+        className="flex-align-self-center iconify-icon"
+        icon={debianIcon}
+      />
+    ),
+    color: "#1c51a5",
+    description: "Server Distro",
+  },
+  {
+    label: "Arch",
+    icon: (
+      <Iconify
+        className="flex-align-self-center iconify-icon"
+        icon={archIcon}
+      />
+    ),
+    color: "#1c51a5",
+    description: "I use Arch btw",
+  },
+  {
+    label: "Gulp",
+    icon: (
+      <FontAwesomeIcon
+        className="flex-align-self-center"
+        fixedWidth
+        icon={faGulp}
+        size="3x"
+      />
+    ),
+    color: "#1c51a5",
+    description: "v3 & v4",
+  },
+  {
+    label: "Sass",
+    icon: (
+      <FontAwesomeIcon
+        className="flex-align-self-center"
+        fixedWidth
+        icon={faSass}
+        size="3x"
+      />
+    ),
+    color: "#1c51a5",
+    description: "Scss",
+  },
+  {
+    label: "Bootstrap",
+    icon: (
+      <FontAwesomeIcon
+        className="flex-align-self-center"
+        fixedWidth
+        icon={faBootstrap}
+        size="3x"
+      />
+    ),
+    color: "#1c51a5",
+    description: "v3 & v4",
   },
 ]
 
