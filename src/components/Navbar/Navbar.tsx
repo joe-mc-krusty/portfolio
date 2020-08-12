@@ -133,17 +133,6 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
             </Link>
             <Link
               activeClass="is-active"
-              to="Works"
-              spy={true}
-              smooth={true}
-              duration={1200}
-              offset={1}
-              className="navbar-item"
-            >
-              Works
-            </Link>
-            <Link
-              activeClass="is-active"
               to="Contact"
               spy={true}
               smooth={true}
