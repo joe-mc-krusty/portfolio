@@ -19,6 +19,7 @@ import Languages from "./Languages/Languages"
 import Works from "./Works/Works"
 import skillData from "../data/skills"
 import subSkillData from "../data/sub-skills"
+import Contact from "./Contact/Contact"
 
 interface Props {
   children?: any
@@ -46,7 +47,7 @@ const Layout = ({ children }: Props) => {
       <Resume />
       <Skills items={skillData} subItems={subSkillData} />
       <Languages />
-      <Works />
+      <Contact />
     </>
   )
 }
