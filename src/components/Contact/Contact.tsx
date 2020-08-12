@@ -15,7 +15,7 @@ type Inputs = {
   email: string
   subject: string
   message: string
-  "form-name"?: string
+  "form-name": string
 }
 
 const Contact = () => {
@@ -27,11 +27,11 @@ const Contact = () => {
       .join("&")
   }
 
-  const onSubmit = (data: Inputs) => {
-    fetch("/", {
+  const onSubmit = async (data: Inputs) => {
+    await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...data }),
+      body: encode(data),
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error))
@@ -55,10 +55,12 @@ const Contact = () => {
         <div className="column is-6 is-offset-3">
           <form
             onSubmit={handleSubmit(onSubmit)}
+            name="contact"
             method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
+            <input name="form-name" type="hidden" value="contact" />
             <div className="field">
               <label className="label has-text-white-ter">Name</label>
               <div className="control has-icons-right">
