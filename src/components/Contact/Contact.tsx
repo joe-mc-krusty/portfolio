@@ -60,7 +60,7 @@ const Contact = () => {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
-            <input name="form-name" type="hidden" value="contact" />
+            <input name="form-name" type="hidden" value="contact" ref={register}/>
             <div className="field">
               <label className="label has-text-white-ter">Name</label>
               <div className="control has-icons-right">
