@@ -30,7 +30,7 @@ import {
 
 const skillData = [
   {
-    label: "Javascript",
+    label: "JS",
     icon: (
       <FontAwesomeIcon
         className="flex-align-self-center"
@@ -114,7 +114,7 @@ const skillData = [
     description: "NestJS framework",
   },
   {
-    label: "Typescript",
+    label: "TS",
     icon: (
       <Iconify className="flex-align-self-center iconify-icon" icon={tsIcon} />
     ),
