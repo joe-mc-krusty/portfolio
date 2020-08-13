@@ -40,7 +40,7 @@ class Skills extends React.Component<SkillsProps, {}> {
     return items.map((item, index) => {
       return (
         <div
-          className="column is-3-fullhd is-2-tablet is-1-mobile skill"
+          className="column is-3-fullhd is-4-widescreen is-6-tablet is-6-mobile is-12-mobilexs skill"
           key={`skill-item-${index}`}
         >
           <div className="card">
@@ -54,7 +54,6 @@ class Skills extends React.Component<SkillsProps, {}> {
               <p className="title is-4 is-block" style={{ color: item.color }}>
                 {item.label}
               </p>
-              <p>{item.description}</p>
             </div>
           </div>
         </div>
@@ -79,25 +78,25 @@ class Skills extends React.Component<SkillsProps, {}> {
     return (
       <section id="Skills" title="Skills" className="Skills block-section">
         <div className="columns">
-          <div className="column is-6 is-offset-3">
+          <div className="column is-6 is-offset-3-tablet is-12-mobile">
             <h2 className="title is-2 has-text-white">Skills</h2>
           </div>
         </div>
         <div className="columns">
-          <div className="column is-6 is-offset-3">
-            <div className="columns is-multiline">{this.renderSkills()}</div>
+          <div className="column is-6 is-offset-3-tablet is-12-mobile">
+            <div className="columns is-multiline is-mobile">{this.renderSkills()}</div>
           </div>
         </div>
         <div className="columns">
-          <div className="column is-6 is-offset-3">
+          <div className="column is-6 is-offset-3-tablet is-12-mobile">
             <h3 className="title is-3 has-text-white">Some More...</h3>
           </div>
         </div>
         <div className="columns">
-          <div className="column is-6 is-offset-3">
+          <div className="column is-6 is-offset-3-tablet is-12-mobile">
             <div className="card">
               <div className="card-content">
-                <Slider {...this.sliderSettings}>
+                <Slider {...this.sliderSettings} arrows={false}>
                   {this.renderSubSkills()}
                 </Slider>
               </div>
