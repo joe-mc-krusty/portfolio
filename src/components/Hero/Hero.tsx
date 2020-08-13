@@ -35,9 +35,9 @@ class Hero extends React.Component<HeroProps, HeroState> {
             /> */}
             <h1 className="title is-1">Hi, I'm Xavier Sanna.</h1>
             <h2 className="subtitle is-5">
-              Passionate developer & devops enthusiast based in France. <br />I
+              Passionate developer & devops enthusiast based in France. <br /><span className="is-hidden-mobile">I
               speak React, Angular, NodeJS, PHP, Python, Linux, Docker &
-              Ansible.
+              Ansible.</span>
             </h2>
             <ul className="icons-list is-inline-block">
               <li className="is-inline-block">
@@ -45,17 +45,17 @@ class Hero extends React.Component<HeroProps, HeroState> {
                   href="https://www.linkedin.com/in/xavier-sanna/"
                   target="_blank"
                 >
-                  <FontAwesomeIcon icon={faLinkedin} size="4x" />
+                  <FontAwesomeIcon icon={faLinkedin} size="2x" />
                 </a>
               </li>
               <li className="is-inline-block">
                 <a href="https://twitter.com/xavier_sanna" target="_blank">
-                  <FontAwesomeIcon icon={faTwitter} size="4x" />
+                  <FontAwesomeIcon icon={faTwitter} size="2x" />
                 </a>
               </li>
               <li className="is-inline-block">
                 <a href="https://github.com/joe-mc-krusty" target="_blank">
-                  <FontAwesomeIcon icon={faGithub} size="4x" />
+                  <FontAwesomeIcon icon={faGithub} size="2x" />
                 </a>
               </li>
             </ul>
