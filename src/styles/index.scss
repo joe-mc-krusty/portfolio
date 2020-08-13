@@ -1,9 +1,10 @@
 @charset "utf-8";
 
 @import "./variables.scss";
+@import "./mixins.scss";
 @import "~bulma/bulma.sass";
-@import '~react-vertical-timeline-component/style.min.css';
-@import "~slick-carousel/slick/slick.css"; 
+@import "~react-vertical-timeline-component/style.min.css";
+@import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 @import "./fonts.scss";
 @import "./main.scss";
