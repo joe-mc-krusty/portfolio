@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 import { useForm } from "react-hook-form"
 
@@ -19,22 +19,52 @@ type Inputs = {
 }
 
 const Contact = () => {
-  const { register, errors, handleSubmit } = useForm()
+  const { register, errors, handleSubmit, reset, formState } = useForm<Inputs>({
+    mode: "onChange",
+  })
 
-  const encode = (data: Inputs) => {
+  const [notification, setNotification] = useState(false)
+  const [success, setSuccess] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+
+  useEffect(() => {
+    if (notification === true) {
+      setTimeout(() => {
+        setNotification(false)
+      }, 2000)
+    }
+  }, [notification])
+
+  const encode = (data: any) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&")
   }
 
   const onSubmit = async (data: Inputs) => {
-    await fetch("/", {
+    setSubmitting(true)
+
+    fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode(data),
     })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error))
+      .then((res) => {
+        console.log(res)
+        if(res.status !== 200) {
+          throw new Error('error');
+        }
+        
+        setSuccess(true)
+        reset()
+      })
+      .catch(() => {
+        setSuccess(false)
+      })
+      .finally(() => {
+        setNotification(true)
+        setSubmitting(false)
+      })
   }
 
   return (
@@ -60,7 +90,12 @@ const Contact = () => {
             data-netlify="true"
             data-netlify-honeypot="bot-field"
           >
-            <input name="form-name" type="hidden" value="contact" ref={register}/>
+            <input
+              name="form-name"
+              type="hidden"
+              value="contact"
+              ref={register}
+            />
             <div className="field">
               <label className="label has-text-white-ter">Name</label>
               <div className="control has-icons-right">
@@ -122,7 +157,7 @@ const Contact = () => {
 
             <div className="field">
               <label className="label has-text-white-ter">Subject</label>
-              <div className="control has-icons-left has-icons-right">
+              <div className="control has-icons-right">
                 <input
                   className={`input ${errors.subject && "is-danger"}`}
                   name="subject"
@@ -169,13 +204,41 @@ const Contact = () => {
             </div>
             <div className="field">
               <div className="control">
-                <button className="button is-link" type="submit">
+                <button
+                  className="button is-link"
+                  type="submit"
+                  disabled={!formState.isValid || submitting}
+                >
                   Submit
                 </button>
               </div>
             </div>
           </form>
         </div>
+      </div>
+
+      <div
+        className={`notification is-success ${
+          notification && success ? "show" : ""
+        }`}
+      >
+        <button
+          className="delete"
+          onClick={() => setNotification(false)}
+        ></button>
+        Message Successfully Sent.
+      </div>
+
+      <div
+        className={`notification is-danger ${
+          notification && !success ? "show" : ""
+        }`}
+      >
+        <button
+          className="delete"
+          onClick={() => setNotification(false)}
+        ></button>
+        An Error Occured. Your Message Could Not Be Sent
       </div>
     </section>
   )

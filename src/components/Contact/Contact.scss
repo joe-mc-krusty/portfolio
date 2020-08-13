@@ -4,4 +4,18 @@
   textarea {
     width: 100%;
   }
+
+  .notification {
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    width: 20%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    &.show {
+      opacity: 1;
+    }
+  }
 }
