@@ -1,12 +1,16 @@
-html,
 body {
-  font-size: 1rem;
+  overflow-y: hidden;
 }
 
 section.block-section {
   padding: 3.5em 0;
 }
 
+@include touch {
+  section.block-section {
+    padding: 2rem 2rem;
+  }
+}
 /******************/
 /* Helper classes */
 /******************/
