@@ -34,8 +34,9 @@ class Footer extends React.Component {
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
           </p>
+          
           <p>
-            © Copyright 2020 Xavier Sanna | Powered By{" "}
+            Powered By{" "}
             <a href="https://reactjs.org/" target="_blank">
               <Iconify className="iconify-icon" icon={reactIcon} />
             </a>{" "}
@@ -49,6 +50,7 @@ class Footer extends React.Component {
               <Iconify className="iconify-icon" icon={netlifyIcon} />
             </a>{" "}
           </p>
+          <p>© Copyright {new Date().getFullYear()} Xavier Sanna</p>
         </div>
       </footer>
     )
