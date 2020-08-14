@@ -1,0 +1,95 @@
+@include desktop {
+  .Navbar {
+    transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+
+    &.transparent {
+      background: rgba(255, 255, 255, 0);
+      .navbar-item {
+        color: #ffffff;
+      }
+    }
+
+    &.invisible {
+      background: rgba(255, 255, 255, 0);
+      opacity: 0;
+      color: rgba(255, 255, 255, 0);
+    }
+
+    &.plain {
+      opacity: 1;
+      background: #ffffff;
+      .navbar-item {
+        color: #000000;
+      }
+    }
+    .navbar-start {
+      flex-grow: 1;
+      justify-content: center;
+    }
+  }
+}
+
+@include touch {
+  .Navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: none;
+    -moz-transition: none;
+    -webkit-transition: none;
+    background: rgba(255, 255, 255, 0);
+    opacity: 1;
+
+    width: 100%;
+
+    .navbar-brand {
+      position: relative;
+      background: rgba(255, 255, 255, 0);
+    }
+    .navbar-burger {
+      background-color: rgba(52, 152, 219, 1);
+      color: rgba(255, 255, 255, 1);
+      border-radius: 50%;
+      margin-top: 1rem;
+      margin-right: 1rem;
+      z-index: 1;
+      transition: background-color 0.5s ease-in-out;
+      -moz-transition: background-color 0.5s ease-in-out;
+      -webkit-transition: background-color 0.5s ease-in-out;
+
+      &.is-pressed {
+        background: rgba(50, 115, 220, 1);
+      }
+    }
+
+    .navbar-menu {
+      &.is-displayed {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .navbar-start {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      display: block;
+      visibility: hidden;
+      transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      -moz-transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      -webkit-transition: visibility 0.5s ease-in-out, opacity 0.5s ease-in-out;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+    }
+  }
+}

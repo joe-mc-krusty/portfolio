@@ -1,5 +1,12 @@
 import React from "react"
-import { Link, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowAltCircleUp } from "@fortawesome/free-solid-svg-icons"
@@ -11,23 +18,25 @@ interface NavbarProps {
 }
 interface NavbarState {
   scrollY: number
+  display: boolean
 }
 
 class Navbar extends React.Component<NavbarProps, NavbarState> {
   state: NavbarState = {
     scrollY: 0,
+    display: false,
   }
 
   componentDidMount() {
-    Events.scrollEvent.register('begin', function(to, element) {
-      console.log("begin", arguments);
-    });
- 
-    Events.scrollEvent.register('end', function(to, element) {
-      console.log("end", arguments);
-    });
- 
-    scrollSpy.update();
+    Events.scrollEvent.register("begin", function (to, element) {
+      console.log("begin", arguments)
+    })
+
+    Events.scrollEvent.register("end", function (to, element) {
+      console.log("end", arguments)
+    })
+
+    scrollSpy.update()
 
     window.addEventListener("scroll", this.handleScroll, { passive: true })
   }
@@ -38,6 +47,7 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
 
   private handleScroll = () => {
     this.setState({ scrollY: window.scrollY })
+    this.setState({ display: false })
   }
 
   private setVisibility(scroll: number) {
@@ -55,7 +65,7 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
   render() {
     return (
       <nav
-        className={`Navbar navbar is-fixed-top-desktop is-hidden-touch
+        className={`Navbar navbar is-fixed-top-desktop 
           ${this.setVisibility(this.state.scrollY)}
         `}
         role="navigation"
@@ -64,10 +74,11 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
         <div className="navbar-brand">
           <a
             role="button"
-            className="navbar-burger burger"
+            className={`navbar-burger burger ${this.state.display ? "is-pressed" : ""}`}
             aria-label="menu"
             aria-expanded="false"
-            data-target="navbarBasicExample"
+            data-target="navbar"
+            onClick={() => this.setState({ display: !this.state.display })}
           >
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -75,7 +86,10 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
           </a>
         </div>
 
-        <div id="navbarBasicExample" className="navbar-menu">
+        <div
+          id="navbar"
+          className={`navbar-menu ${this.state.display ? "is-displayed" : ""}`}
+        >
           <div className="navbar-start">
             <Link
               activeClass="is-active"
