@@ -17,6 +17,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `resumes`,
+        path: `${__dirname}/src/static/resume`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `fonts`,
         path: `${__dirname}/src/fonts`,
       },
