@@ -6,11 +6,7 @@ import Image from "../Image"
 
 import "./About.scss"
 
-interface AboutProps {}
-interface AboutState {}
-
-class About extends React.Component<AboutProps, AboutState> {
-  render() {
+const About = () => {
     return (
       <section id="About" title="About" className="About block-section">
         <div className="columns">
@@ -74,7 +70,6 @@ class About extends React.Component<AboutProps, AboutState> {
         </div>
       </section>
     )
-  }
 }
 
 export default About
