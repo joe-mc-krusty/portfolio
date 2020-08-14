@@ -21,12 +21,10 @@ interface SkillsProps {
 }
 
 class Skills extends React.Component<SkillsProps, {}> {
-  private items = this.props.items
-
   private sliderSettings = {
     dots: false,
     infinite: true,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     speed: 1000,
@@ -95,7 +93,7 @@ class Skills extends React.Component<SkillsProps, {}> {
         <div className="columns">
           <div className="column is-6 is-offset-3-tablet is-12-mobile">
             <div className="card">
-              <div className="card-content">
+              <div className="card-content px-0">
                 <Slider {...this.sliderSettings} arrows={false}>
                   {this.renderSubSkills()}
                 </Slider>
