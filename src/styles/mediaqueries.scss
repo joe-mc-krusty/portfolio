@@ -30,6 +30,14 @@
       justify-content: center;
     }
   }
+
+  .Contact {
+    .notification {
+      bottom: 1em;
+      right: 1em;
+      width: 20%;
+    }
+  }
 }
 
 @include touch {
@@ -90,6 +98,15 @@
       width: 100%;
       height: 100vh;
       text-align: center;
+    }
+  }
+
+  .Contact {
+    .notification {
+      bottom: 1em;
+      left: 50%;
+      width: 90%;
+      transform: translate(-50%, 0);
     }
   }
 }
