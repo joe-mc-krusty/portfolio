@@ -1,6 +1,11 @@
 import React from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faDownload } from "@fortawesome/free-solid-svg-icons"
+
+import { Icon as Iconify, InlineIcon as IconifyInline } from "@iconify/react"
+import flagForFrance from "@iconify/icons-emojione/flag-for-france"
+import flagForUs from "@iconify/icons-emojione/flag-for-united-states"
 
 import Image from "../Image"
 
@@ -66,6 +71,20 @@ const About = () => {
               new techs, learning foreign languages & playing music instruments.
             </p>
             <p>Arch linux is my daily driver. I use Arch btw.</p>
+          </div>
+        </div>
+        <div className="columns">
+          <div className="column is-6 is-offset-3">
+            <a className="button is-primary is-outlined resume-btn">
+              <FontAwesomeIcon icon={faDownload} />
+              <span>Download my Resume</span>
+              <Iconify icon={flagForUs} />
+            </a>
+            <a className="button is-primary is-outlined resume-btn">
+              <FontAwesomeIcon icon={faDownload} />
+              <span>Télécharger Mon CV</span>
+              <Iconify icon={flagForFrance} />
+            </a>
           </div>
         </div>
       </section>

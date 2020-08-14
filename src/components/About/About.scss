@@ -29,4 +29,19 @@
       color: #00d2b4;
     }
   }
+
+  .resume-btn {
+    &:first-child {
+      margin-right: 0.5rem;
+    }
+
+    &:last-child {
+      margin-left: 0.5rem;
+    }
+
+    span {
+      margin: 0 0.5rem;
+    }
+    
+  }
 }
