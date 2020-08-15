@@ -122,7 +122,7 @@ const Contact = () => {
 
             <div className="field">
               <label className="label has-text-white-ter">Email</label>
-              <div className="control has-icons-left has-icons-right">
+              <div className="control has-icons-right">
                 <input
                   className={`input ${errors.email && "is-danger"}`}
                   name="email"
@@ -133,13 +133,6 @@ const Contact = () => {
                     pattern: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
                   })}
                 />
-                <span className="icon is-small is-left">
-                  <FontAwesomeIcon
-                    className="flex-align-self-center"
-                    fixedWidth
-                    icon={faEnvelope}
-                  />
-                </span>
                 {errors.email && (
                   <span className="icon is-small is-right">
                     <FontAwesomeIcon
