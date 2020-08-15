@@ -9,6 +9,10 @@
       background: rgba(255, 255, 255, 0);
       .navbar-item {
         color: #ffffff;
+
+        &.is-active {
+          color: #ff3860;
+        }
       }
     }
 
@@ -21,13 +25,32 @@
     &.plain {
       opacity: 1;
       background: #ffffff;
+
       .navbar-item {
         color: #000000;
+
+        &.is-active {
+          color: #00d1b2;
+        }
       }
     }
+
     .navbar-start {
       flex-grow: 1;
       justify-content: center;
+    }
+
+    .navbar-item {
+      background-color: transparent;
+
+      
+
+      &:hover,
+      &:focus,
+      &:focus-within {
+        background-color: unset;
+        color: unset;
+      }
     }
   }
 
