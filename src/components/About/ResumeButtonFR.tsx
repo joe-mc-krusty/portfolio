@@ -27,7 +27,7 @@ const ResumeButtonFR = () => {
       title={resume.file.name}
     >
       <FontAwesomeIcon icon={faDownload} />
-      <span>Download my Resume</span>
+      <span>Télécharger mon CV</span>
       <Iconify icon={flagForFrance} />
     </a>
   )
