@@ -36,7 +36,7 @@ class Hero extends React.Component<HeroProps, HeroState> {
             <h1 className="title is-1">Hi, I'm Xavier Sanna.</h1>
             <h2 className="subtitle is-5">
               Passionate developer & devops enthusiast based in France. <br /><span className="is-hidden-mobile">I
-              speak React, Angular, NodeJS, PHP, Python, Linux, Docker &
+              speak JS, PHP, Python, Linux, Docker &
               Ansible.</span>
             </h2>
             <ul className="icons-list is-inline-block">
