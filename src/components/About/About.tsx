@@ -44,11 +44,14 @@ const About = () => {
           </p>
           <p className="content">
             <strong>Javascript</strong> has always been part of my tech stack
-            and took over time a larger place, to the point where it became the
-            main language I now use on my job and personal projects. I've been
-            working on both frontend and backend with the following frameworks:{" "}
+            and took over time a larger place. I've been working on both
+            frontend and backend with the following frameworks:{" "}
             <strong>React</strong>, <strong>Angular</strong>,{" "}
             <strong>NestJS (node)</strong>
+          </p>
+          <p className="content">
+            I enjoy working with both <strong>PHP</strong> & <strong>JS</strong>
+            , but am also open to many other languages and techs.
           </p>
           <p className="content">
             I like to automate everyhting I touch & being a Unix systems
