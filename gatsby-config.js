@@ -8,6 +8,13 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-175783532-1",
+        head: true,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
@@ -57,6 +64,7 @@ module.exports = {
         allExtensions: true,
       },
     },
+
     `gatsby-plugin-offline`,
   ],
 }
