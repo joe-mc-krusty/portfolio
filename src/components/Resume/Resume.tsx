@@ -246,7 +246,7 @@ class Resume extends React.Component<ResumeProps, ResumeState> {
 
               <VerticalTimelineElement
                 className="vertical-timeline-element--work"
-                date="Jan 2014 to June 2016"
+                date="Jan 2014 to April 2017"
                 iconStyle={{ background: this.timelineColor, color: "#fff" }}
                 icon={<FontAwesomeIcon fixedWidth icon={faPlane} />}
               >
